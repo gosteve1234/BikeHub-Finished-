@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Robante, Roa, Esmeres, Avelino" />
+  <title>BikeHub</title>
+  <link rel="icon" href="assets/img/bikehublogo4.jpeg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- =================== NAVIGATION BAR =================== -->
+  <div id="navbar">
+    <!-- Logo -->
+    <div id="logo">
+      <img id="navlogo" src="assets/img/bikehublogo4.jpeg" alt="logo" height="50px" width="50px" />
+    </div>
+
+    <!-- Site Title -->
+    <div id="navtitle">
+      <h2>"Ride Your Way, Every Day"</h2>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="navlinks">
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">About</a></li>
+        <li><a href="index3.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- User Icon -->
+    <div id="user-icon">
+      <img src="assets/img/usericon.png" alt="User Icon" id="userIcon" style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
+    </div>
+
+    <!-- User Login Modal -->
+    <div id="userModal" class="user-modal">
+      <div class="user-modal-content">
+        <span class="close-user-modal">&times;</span>
+        <h2>Login</h2>
+        <form id="userLoginForm">
+          <label for="username">Username or Email:</label>
+          <input type="text" id="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+
+          <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <div class="user-buttons">
+            <button type="submit" class="signin-btn">Sign In</button>
+            <button type="button" class="signup-btn">Sign Up</button>
+          </div>
+        </form>
+      </div>  
+    </div>
+
+    <!-- Signed-In User Popup -->
+    <div id="userMenuPopup" class="user-menu-popup">
+      <div class="user-menu-content">
+        <img id="menuProfileImage" src="assets/img/usericon.png" alt="Profile Picture" class="user-menu-avatar" >
+        <ul class="user-menu-options">
+          <li><button id="profileBtn">Profile</button></li>
+          <li><button id="transactionBtn">Transactions</button></li>
+          <li><button id="darkModeToggle">Dark Mode</button></li>
+          <li><button id="logoutBtn">Log Out</button></li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+      <div class="modal-content">
+        <span class="close-profile-modal">&times;</span>
+        <div class="profile-section">
+          <img id="profileImage" src="assets/img/usericon.png" alt="Profile Picture" class="profile-pic" />
+          <span id="editPictureBtn" class="edit-picture-text">Edit</span>
+          <h2 id="profileUsername"></h2>
+          <p id="profileEmail"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Picture Options Modal -->
+    <div id="pictureOptionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-picture-options">&times;</span>
+        <h3>Change Profile Picture</h3>
+        <button id="takePhotoBtn">Take a Photo</button>
+        <button id="pickFromAlbumBtn">Pick from Album</button>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+      </div>
+    </div>
+
+    <!-- User Sign Up Modal -->
+    <div id="signUpModal" class="user-modal">
+      <div class="user-modal-content">
+        <span class="close-signup-modal">&times;</span>
+        <h2>Create Account</h2>
+        <form id="signUpForm">
+          <label for="newUsername">Username:</label>
+          <input type="text" id="newUsername" required>
+
+          <label for="newEmail">Email:</label>
+          <input type="email" id="newEmail" required>
+
+          <label for="newPassword">Password:</label>
+          <input type="password" id="newPassword" required>
+
+          <label for="retypePassword">Re-type Password:</label>
+          <input type="password" id="retypePassword" required>
+
+          <button type="submit" class="create-account-btn">Create</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="user-modal">
+    <div class="user-modal-content">
+      <span class="close-forgot-modal">&times;</span>
+      <h2>Reset Password</h2>
+      <form id="forgotPasswordForm">
+        <label for="resetUsernameEmail">Username or Email:</label>
+        <input type="text" id="resetUsernameEmail" required>
+
+        <label for="newResetPassword">New Password:</label>
+        <input type="password" id="newResetPassword" required>
+
+        <label for="retypeResetPassword">Re-type New Password:</label>
+        <input type="password" id="retypeResetPassword" required>
+
+        <button type="submit" class="confirm-reset-btn">Confirm</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- =================== INTRODUCTION SECTION =================== -->
+
+    <div class="container">
+      <div class="content">
+        <!-- Image -->
+        <div class="hero-image">
+          <img src="assets/img/Bike.jpg" alt="Hero Image" />
+        </div>
+
+        <!-- Introduction -->
+        <div class="text-and-link">
+          <div class="hero-text">
+            <h2>BikeHub – Ride Your Way. Your trusted bike rental service for every journey.</h2>
+            <p>
+              Welcome to BikeHub – your ultimate destination for bike rentals and cycling adventures.
+              At BikeHub, we believe the joy of cycling should be accessible to everyone...
+            </p>
+          </div>
+          <div class="hero-link">
+            <a href="index2.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- =================== SERVICE OFFERS =================== -->
+  <div class="image-containers">
+    <div class="image-row">
+
+      <!-- Bike 1 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/mountainbike1.png" alt="Image 1" class="image" /></a>
+        <p class="image-text">Mountain Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal1">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 2 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/roadbike.png" alt="Image 2" class="image" /></a>
+        <p class="image-text">Road Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal2">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 3 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/hybridbike.png" alt="Image 3" class="image" /></a>
+        <p class="image-text">Hybrid Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal3">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 4 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/bmxbike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">BMX Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal4">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 5 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/ebike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">E-Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal5">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 6 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/kidsbike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">Kids Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal6">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 7 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/cruiserbike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">Cruiser Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal7">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 8 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/gravelbike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">Gravel Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal8">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- Bike 9 Card -->
+      <div class="image-card">
+        <a href="#"><img src="assets/img/foldingbike.jpeg" alt="Image 1" class="image" /></a>
+        <p class="image-text">Folding Bike</p>
+        <div class="image-button">
+          <button class="openModal" data-modal="modal9">Rent Now</button>
+        </div>
+      </div>
+
+      <!-- ============= BIKE MODALS =============== -->
+        <!-- Bike 1 Modal -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/mountainbike1.png" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Mountain Bike</h2>
+                <h4>Price: ₱500/day</h4>
+                <p>This is a high-performance mountain bike perfect for trail riding.</p>
+                <ul class="modal-features">
+                  <li>21-Speed Gear System</li>
+                  <li>Hydraulic Disc Brakes</li>
+                  <li>Lightweight Aluminum Frame</li>
+                  <li>Front Suspension</li>
+                </ul>
+                <p class="availability-status" id="status1">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Mountain Bike', 'assets/img/1.jpg', 500)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+          
+        <!-- Bike 2 Modal -->
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/roadbike.png" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Road Bike</h2>
+                <h4>Price: ₱600/day</h4>
+                <p>This is a lightweight road bike designed for speed and efficiency.</p>
+                <ul class="modal-features">
+                  <li>Shimano 105 Components</li>
+                  <li>Aero Frame Design</li>
+                  <li>Carbon Fiber Fork</li>
+                  <li>700c Wheels</li>
+                </ul>
+                <p class="availability-status" id="status2">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Road Bike', 'assets/img/2.jpg', 600)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+        <!-- Bike 3 Modal -->
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/hybridbike.png" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Hybrid Bike</h2>
+                <h4>Price: ₱380/day</h4>
+                <p>This is a versatile hybrid bike suitable for both city commuting and light trails.</p>
+                <ul class="modal-features">
+                  <li>Comfortable Saddle</li>
+                  <li>Multi-surface Tires</li>
+                  <li>Aluminum Frame</li>
+                  <li>Flat Handlebars</li>
+                </ul>
+                <p class="availability-status" id="status3">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Hybrid Bike', 'assets/img/3.jpg', 380)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 4 Modal -->
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/bmxbike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>BMX Bike</h2>
+                <h4>Price: ₱300/day</h4>
+                <p>This is a durable BMX bike designed for tricks and stunts.</p>
+                <ul class="modal-features">
+                  <li>20-inch Wheels</li>
+                  <li>Single Speed</li>
+                  <li>Steel Frame</li>
+                  <li>Rear U-Brake</li>
+                </ul>
+                <p class="availability-status" id="status4">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('BMX Bike', 'assets/img/bmxbike.jpg', 300)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 5 Modal -->
+          <div id="modal5" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/ebike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>E-Bike</h2>
+                <h4>Price: ₱800/day</h4>
+                <p>This is an electric bike with pedal assist for easy commuting.</p>
+                <ul class="modal-features">
+                  <li>250W Motor</li>
+                  <li>Removable Battery</li>
+                  <li>7-Speed Gear System</li>
+                  <li>LED Headlight</li>
+                </ul>
+                <p class="availability-status" id="status5">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('E-Bike', 'assets/img/ebike.jpeg', 800)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 6 Modal -->
+          <div id="modal6" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/kidsbike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Kids Bike</h2>
+                <h4>Price: ₱250/day</h4>
+                <p>This is a fun and safe bike designed for children.</p>
+                <ul class="modal-features">
+                  <li>16-inch Wheels</li>
+                  <li>Adjustable Seat</li>
+                  <li>Training Wheels</li>
+                  <li>Colorful Design</li>
+                </ul>
+                <p class="availability-status" id="status6">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Kids Bike', 'assets/img/kidsbike.jpeg', 250)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 7 Modal -->
+          <div id="modal7" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/cruiserbike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Cruiser Bike</h2>
+                <h4>Price: ₱400/day</h4>
+                <p>This is a stylish cruiser bike perfect for leisurely rides.</p>
+                <ul class="modal-features">
+                  <li>Comfortable Seat</li>
+                  <li>Wide Tires</li>
+                  <li>Classic Design</li>
+                  <li>Easy to Ride</li>
+                </ul>
+                <p class="availability-status" id="status7">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Cruiser Bike', 'assets/img/cruiserbike.jpeg', 400)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 8 Modal -->
+          <div id="modal8" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/gravelbike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Gravel Bike</h2>
+                <h4>Price: ₱450/day</h4>
+                <p>This is a versatile gravel bike designed for mixed terrain.</p>
+                <ul class="modal-features">
+                  <li>Wide Tires</li>
+                  <li>Disc Brakes</li>
+                  <li>Lightweight Frame</li>
+                  <li>Comfortable Geometry</li>
+                </ul>
+                <p class="availability-status" id="status8">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Gravel Bike', 'assets/img/gravelbike.jpeg', 450)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike 9 Modal -->
+          <div id="modal9" class="modal">
+            <div class="modal-content">
+              <div class="modal-image">
+                <img src="assets/img/foldingbike.jpeg" alt="Bike Image">
+              </div>
+              <div class="modal-details">
+                <h2>Folding Bike</h2>
+                <h4>Price: ₱350/day</h4>
+                <p>This is a compact folding bike perfect for urban commuting.</p>
+                <ul class="modal-features">
+                  <li>Compact Design</li>
+                  <li>Lightweight Frame</li>
+                  <li>7-Speed Gear System</li>
+                  <li>Easy to Fold</li>
+                </ul>
+                <p class="availability-status" id="status9">Checking availability...</p>
+              </div>
+              <div class="modal-buttons">
+                <button class="rentBtn" onclick="openRentForm('Folding Bike', 'assets/img/foldingbike.jpeg', 350)">Rent</button>
+                <button class="closeModal">Close</button>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </div>
+
+    <!-- =================== RENT FORM MODAL =================== -->
+  <div id="rentFormModal" class="rent-form-modal">
+    <div class="rent-form-content">
+      <span class="close-form">&times;</span>
+
+      <!-- Form -->
+      <form onsubmit="submitRentForm(event)" id="rentForm">
+        <h2>Rental Form</h2>
+
+        <label for="duration">Purchase:</label>
+        <input type="number" id="totalPurchase" min="1" required>
+
+        <label for="date">Rental Date:</label>
+        <input type="date" id="rentalDate" required>
+
+        <label for="duration">Duration (days):</label>
+        <input type="number" id="duration" min="1" required>
+
+        <button type="submit">Submit</button>
+      </form>
+      
+
+<!--================ Receipt Modal ========================-->
+    <div id="receiptModal" class="modal">
+      <div class="modal-content receipt-modal">
+        <div class="receipt-info">
+          <img id="receiptBikeImage" src="" alt="Bike Image" />
+          <div class="receipt-details">
+          <h2 id="receiptBikeName">Bike Name</h2>
+          <p>Price: ₱<span id="receiptBikePrice">0</span> / day</p>
+          <p>Purchase: <span id="receiptTotalPurchase"></span></p>
+          <p>Start Date: <span id="receiptStartDate"></span></p>
+          <p>Duration: <span id="receiptDuration"></span> day(s)</p>
+          <p>Total Amount: ₱<span id="receiptTotal"></span></p>
+          <div class="receipt-buttons">
+            <button onclick="confirmRental()">Confirm</button>
+            <button onclick="closeReceiptModal()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+<!---========= Transaction Modal =============-->
+<div id="transactionModal" class="modal">
+  <div class="transaction-modal-content">
+    <h2>Transaction History</h2>
+    <table id="transaction-table" class="transaction-table">
+      <tr>
+        <th>Bike Model</th>
+        <th>Rental Start</th>
+        <th>Rental End</th>
+        <th>Purchased</th>
+      </tr>
+    </table>
+    <div class="transaction-modal-footer">
+      <button id="closeTransactionModal" class="close-transaction-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<!--FOOTER-->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <h3>About Us</h3>
+      <p>We are dedicated to delivering the best service with passion and commitment.</p>
+    </div>
+    <div class="footer-column links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column contact">
+      <h3>Contact</h3>
+      <p>Email: support@example.com</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Address: 123 Main Street, City, Country</p>
+    </div>
+    <div class="footer-column social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Your Company. All rights reserved.
+  </div>
+</footer>
+  <!-- =================== SCRIPTS =================== -->
+  <script src="assets/js/scripts.js" defer></script>
+  <script src="assets/js/inventory.js" defer></script>
+</body>
+</html>
+
+

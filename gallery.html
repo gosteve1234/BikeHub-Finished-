@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="John Edwel Esmeres, johnedwel.esmeres@wvsu.edu.ph" />
+  <title>BikeHub • Gallery</title>
+  <link rel="icon" href="assets/img/bikehublogo4.jpeg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/gallery.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- JavaScript -->
+  <script src="assets/js/ScriptOthers.js" defer></script>
+
+  <!-- =================== NAVIGATION BAR =================== -->
+  <div id="navbar">
+    <!-- Logo -->
+    <div id="logo">
+      <img id="navlogo" src="assets/img/bikehublogo4.jpeg" alt="logo" height="50px" width="50px" />
+    </div>
+
+    <!-- Site Title -->
+    <div id="navtitle">
+      <h2>"Ride Your Way, Every Day"</h2>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="navlinks">
+      <ul id="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">About</a></li>
+        <li><a href="index3.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <!-- User Icon -->
+    <div id="user-icon">
+      <img src="assets/img/usericon.png" alt="User Icon" id="userIcon" style="width:40px; height:40px; border-radius:50%; cursor:pointer;">
+    </div>
+
+    <!-- User Login Modal -->
+    <div id="userModal" class="user-modal">
+      <div class="user-modal-content">
+        <span class="close-user-modal">&times;</span>
+        <h2>Login</h2>
+        <form id="userLoginForm">
+          <label for="username">Username or Email:</label>
+          <input type="text" id="username" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+
+          <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <div class="user-buttons">
+            <button type="submit" class="signin-btn">Sign In</button>
+            <button type="button" class="signup-btn">Sign Up</button>
+          </div>
+        </form>
+      </div>  
+    </div>
+
+    <!-- Signed-In User Popup -->
+    <div id="userMenuPopup" class="user-menu-popup">
+      <div class="user-menu-content">
+        <img id="menuProfileImage" src="assets/img/usericon.png" alt="Profile Picture" class="user-menu-avatar" >
+        <ul class="user-menu-options">
+          <li><button id="profileBtn">Profile</button></li>
+          <li><button id="transactionBtn">Transactions</button></li>
+          <li><button id="darkModeToggle">Dark Mode</button></li>
+          <li><button id="logoutBtn">Log Out</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal">
+      <div class="modal-content">
+        <span class="close-profile-modal">&times;</span>
+        <div class="profile-section">
+          <img id="profileImage" src="assets/img/usericon.png" alt="Profile Picture" class="profile-pic" />
+          <span id="editPictureBtn" class="edit-picture-text">Edit</span>
+          <h2 id="profileUsername"></h2>
+          <p id="profileEmail"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Picture Options Modal -->
+    <div id="pictureOptionsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-picture-options">&times;</span>
+        <h3>Change Profile Picture</h3>
+        <button id="takePhotoBtn">Take a Photo</button>
+        <button id="pickFromAlbumBtn">Pick from Album</button>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+      </div>
+    </div>
+
+    <!-- User Sign Up Modal -->
+    <div id="signUpModal" class="user-modal">
+      <div class="user-modal-content">
+        <span class="close-signup-modal">&times;</span>
+        <h2>Create Account</h2>
+        <form id="signUpForm">
+          <label for="newUsername">Username:</label>
+          <input type="text" id="newUsername" required>
+
+          <label for="newEmail">Email:</label>
+          <input type="email" id="newEmail" required>
+
+          <label for="newPassword">Password:</label>
+          <input type="password" id="newPassword" required>
+
+          <label for="retypePassword">Re-type Password:</label>
+          <input type="password" id="retypePassword" required>
+
+          <button type="submit" class="create-account-btn">Create</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="user-modal">
+    <div class="user-modal-content">
+      <span class="close-forgot-modal">&times;</span>
+      <h2>Reset Password</h2>
+      <form id="forgotPasswordForm">
+        <label for="resetUsernameEmail">Username or Email:</label>
+        <input type="text" id="resetUsernameEmail" required>
+
+        <label for="newResetPassword">New Password:</label>
+        <input type="password" id="newResetPassword" required>
+
+        <label for="retypeResetPassword">Re-type New Password:</label>
+        <input type="password" id="retypeResetPassword" required>
+
+        <button type="submit" class="confirm-reset-btn">Confirm</button>
+      </form>
+    </div>
+  </div>
+
+<!-- ================= GALLERY ================= -->
+
+<div class="container">
+  <div class="heading">
+    <h3>Photo <span>Gallery</span></h3>
+  </div>
+  <div class="box">
+
+     <div class="dream">
+      <img src="assets/img/gallery-img1.jpg">
+      <img src="assets/img/gallery-img2.jpg">
+      <img src="assets/img/gallery-img3.jpg">
+      <img src="assets/img/gallery-img4.jpg">
+      <img src="assets/img/gallery-img5.jpg">
+      <img src="assets/img/gallery-img6.jpg">
+      <img src="assets/img/gallery-img7.jpg">
+      <img src="assets/img/gallery-img8.jpg">
+      <img src="assets/img/gallery-img9.jpg">
+      <img src="assets/img/gallery-img10.jpg">
+     </div>
+
+     <div class="dream">
+      <img src="assets/img/gallery-img11.jpg">
+      <img src="assets/img/gallery-img12.jpg">
+      <img src="assets/img/gallery-img13.jpg">
+      <img src="assets/img/gallery-img14.jpg">
+      <img src="assets/img/gallery-img16.jpg">
+      <img src="assets/img/gallery-img17.jpg">
+      <img src="assets/img/gallery-img18.jpg">
+      <img src="assets/img/gallery-img19.jpg">
+      <img src="assets/img/gallery-img20.jpg">
+     </div>
+
+          <div class="dream">
+      <img src="assets/img/gallery-img21.jpg">
+      <img src="assets/img/gallery-img22.jpg">
+      <img src="assets/img/gallery-img23.jpg">
+      <img src="assets/img/gallery-img24.jpg">
+      <img src="assets/img/gallery-img25.jpg">
+      <img src="assets/img/gallery-img26.jpg">
+      <img src="assets/img/gallery-img27.jpg">
+      <img src="assets/img/gallery-img28.jpg">
+      <img src="assets/img/gallery-img29.jpg">
+      <img src="assets/img/gallery-img30.jpg">
+     </div>
+
+  </div>
+
+
+</div>
+
+<!---========= Transaction Modal =============-->
+<div id="transactionModal" class="modal">
+  <div class="transaction-modal-content">
+    <h2>Transaction History</h2>
+    <table id="transaction-table" class="transaction-table">
+      <tr>
+        <th>Bike Model</th>
+        <th>Rental Start</th>
+        <th>Rental End</th>
+        <th>Purchased</th>
+      </tr>
+    </table>
+    <div class="transaction-modal-footer">
+      <button id="closeTransactionModal" class="close-transaction-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+    <!--FOOTER-->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column about">
+      <h3>About Us</h3>
+      <p>We are dedicated to delivering the best service with passion and commitment.</p>
+    </div>
+    <div class="footer-column links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column contact">
+      <h3>Contact</h3>
+      <p>Email: support@example.com</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Address: 123 Main Street, City, Country</p>
+    </div>
+    <div class="footer-column social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 BikeHub. All rights reserved.
+  </div>
+</footer>
+
+
+
+</body>
+</html>

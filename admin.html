@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="">
+        <title>AdminDashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/admin.css">
+    </head>
+    <body>
+        <div class="modal" id="login-modal">
+            <div class="modal-account">
+                <h2>Account</h2>
+                    <div class="info">
+                        <label for="username">User</label>
+                        <input type="text" id="username" name="username" required>
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                    <div class="info">
+                        <label for="password">Pass</label>
+                        <input type="password" id="password" name="password" required>
+                        <span class="material-symbols-outlined">lock</span>
+                    </div>
+                    <button type="submit" class="btn" id="loginbtn">Login</button>
+            </div>
+        </div>
+        <div class="grid-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <div class="search-icon">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="user-info">
+                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">person</span>>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-header">
+                    <h2>BikeHub</h2>
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-item active">
+                            <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>  
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="user.html"><span class="material-symbols-outlined">person</span>Users</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="services.html"><span class="material-symbols-outlined">Enterprise</span>Transaction</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="inventory.html"><span class="material-symbols-outlined">Menu</span>Inventory</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="inbox.html"><span class="material-symbols-outlined">Mail</span>Inbox</a>
+                        </li>
+                        <li class="sidebar-item" id="logout">
+                            <a href="admin.html"><span class="material-symbols-outlined">logout</span>Logout</a>
+                        </li>
+                    </ul>
+            </aside>
+            <!-- Main Content -->
+            <main class="main-container">
+                <div class="main-cards">
+                    <div class ="card">
+                        <div class="card-inner">
+                            <h3>Users</h3>
+                            <span class="material-symbols-outlined">person</span>
+                            </div>
+                            <h2 id="current-users">0</h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-inner">
+                            <h3>Services</h3>
+                            <span class="material-symbols-outlined">Enterprise</span>
+                            </div> 
+                            <h2 id="current-transactions">0</h2>
+                        </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <!--Scripts-->
+    <script src="assets/js/admin.js" defer></script>
+</html>

@@ -1,0 +1,44 @@
+/* Management Table */
+#management-table {
+    margin: 40px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+#management-table tr { /*First row*/
+    background-color: #ffffff;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+#management-table tr:nth-child(1) { /*First row*/
+    background-color: #ffffff;
+    height: 50px;
+}
+#management-table tr:nth-child(even){ /*Second row*/
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+}
+/* DELETE BUTTON */
+.delete-btn , .update-btn {
+    text-align: center;
+    margin: 20px 0;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: grey;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.delete-btn:hover {
+    background-color: #ff0800;
+}
+.update-btn:hover {
+    background-color: #007213;
+}
+/* Inventory CSS */

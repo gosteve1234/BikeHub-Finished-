@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="">
+        <title>Inventory</title>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/admin.css">
+        <link rel="stylesheet" href="assets/css/services.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            <!-- Header -->
+            <header class="header">
+                <div class="menu-icon">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <div class="search-icon">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="user-info">
+                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">person</span>>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-header">
+                    <h2>BikeHub</h2>
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-item">
+                            <a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a>  
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="user.html"><span class="material-symbols-outlined">person</span>Users</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="services.html"><span class="material-symbols-outlined">Enterprise</span>Transaction</a>
+                        </li>
+                        <li class="sidebar-item active">
+                            <a href="inventory.html"><span class="material-symbols-outlined">Menu</span>Inventory</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="inbox.html"><span class="material-symbols-outlined">Mail</span>Inbox</a>
+                        </li>
+                        <li class="sidebar-item" id="logout">
+                            <a href="admin.html"><span class="material-symbols-outlined">logout</span>Logout</a>
+                        </li>
+                    </ul>
+            </aside>
+            <!-- Main Content -->
+            <main class="main-container">
+                <table id="management-table">
+                    <tr>
+                        <th>ID</th>
+                        <th>Bike Model</th>
+                        <th>Stocks</th>
+                        <th>Update</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+                        
+            </main>
+        </div>
+    </body>
+    <!--Scripts-->
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/inventory.js" defer></script>
+</html>
